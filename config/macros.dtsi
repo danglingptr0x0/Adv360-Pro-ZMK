@@ -2,7 +2,7 @@ macro_calendar: macro_calendar{
 compatible = "zmk,behavior-macro";
 label = "macro_calendar";
 #binding-cells = <0>;
-bindings = <&kp LEFT_META>, <&kp C>, <&kp A>, <&kp L>, <&kp E>, <&kp N>, <&kp A>, <&kp R>, <&kp RETURN>;
+bindings = <&kp LEFT_META>, <&kp C>, <&kp A>, <&kp L>, <&kp E>, <&kp N>, <&kp D>, <&kp A>, <&kp R>, <&kp RET>;
 };
 macro_calc: macro_calc{
 compatible = "zmk,behavior-macro";
