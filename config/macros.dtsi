@@ -1,3 +1,21 @@
+macro_disassembler: macro_disassembler{
+compatible = "zmk,behavior-macro";
+label = "macro_disassembler";
+#binding-cells = <0>;
+bindings = <&kp LEFT_META>, <&kp C>, <&kp U>, <&kp T>, <&kp T>, <&kp E>, <&kp R>, <&kp RETURN>;
+};
+macro_min: macro_min{
+compatible = "zmk,behavior-macro";
+label = "macro_min";
+#binding-cells = <0>;
+bindings = <&kp LEFT_META>, <&kp DOWN_ARROW>;
+};
+macro_max: macro_max{
+compatible = "zmk,behavior-macro";
+label = "macro_max";
+#binding-cells = <0>;
+bindings = <&kp LEFT_META>, <&kp UP_ARROW>;
+};
 macro_term: macro_term{
 compatible = "zmk,behavior-macro";
 label = "macro_term";
