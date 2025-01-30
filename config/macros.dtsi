@@ -1,3 +1,9 @@
+macro_refresh: macro_refresh{
+compatible = "zmk,behavior-macro";
+label = "macro_refresh";
+#binding-cells = <0>;
+bindings = <&kp LCTRL>, <&kp R>;
+};
 macro_calendar: macro_calendar{
 compatible = "zmk,behavior-macro";
 label = "macro_calendar";
