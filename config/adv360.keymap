@@ -31,6 +31,15 @@
         };
     };
 
+    macros {
+        gotodef: gotodef {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp D>;
+            label = "GOTODEF";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -56,11 +65,11 @@
 
         layer_fn {
             bindings = <
-&kp F1           &kp F2           &kp F3       &kp F4      &kp F5     &kp F6  &tog 1                                                                              &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&macro_nautilus  &kp PRINTSCREEN  &macro_copy  &macro_cut  &kp LC(V)  &trans  &none                                                                               &none   &trans  &trans  &trans  &trans   &trans   &trans
-&macro_calc      &trans           &trans       &trans      &trans     &trans  &none             &kp LA(LC(T))  &macro_max               &kp C_VOL_UP  &kp C_NEXT  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&macro_calendar  &trans           &trans       &trans      &trans     &trans                                   &macro_min               &kp C_VOL_DN                      &trans  &trans  &trans  &trans   &trans   &trans
-&trans           &trans           &trans       &trans      &trans             &kp C_PLAY_PAUSE  &kp C_STOP     &macro_disassembler      &kp C_MUTE    &trans      &trans          &trans  &trans  &trans   &trans   &trans
+&kp F1           &kp F2           &kp F3       &kp F4      &kp F5     &kp F6  &tog 1                                                                                         &mo 3     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&macro_nautilus  &kp PRINTSCREEN  &macro_copy  &macro_cut  &kp LC(V)  &trans  &none                                                                                          &none     &trans  &trans  &trans  &trans   &trans   &kp LS(K)
+&macro_calc      &trans           &trans       &trans      &trans     &trans  &none             &kp LA(LC(T))  &macro_max               &kp C_VOL_UP  &kp C_NEXT             &none     &trans  &trans  &trans  &trans   &trans   &trans
+&macro_calendar  &trans           &trans       &trans      &trans     &trans                                   &macro_min               &kp C_VOL_DN                                   &trans  &trans  &trans  &trans   &trans   &trans
+&trans           &trans           &trans       &trans      &trans             &kp C_PLAY_PAUSE  &kp C_STOP     &macro_disassembler      &kp C_MUTE    &kp LC(RIGHT_BRACKET)  &gotodef          &trans  &trans  &trans   &trans   &trans
             >;
         };
 
