@@ -158,6 +158,17 @@
             bindings = <&kp M &kp A &kp K &kp E &kp SPACE &kp C &kp L &kp E &kp A &kp N &kp RET>;
             label = "MAKECLEAN";
         };
+
+        reisub: reisub {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp PRINTSCREEN &kp LEFT_ALT &kp R &kp E &kp I &kp S &kp U &kp B>,
+                <&macro_release>;
+
+            label = "REISUB";
+        };
     };
 
     keymap {
@@ -205,11 +216,11 @@
 
         experimental {
             bindings = <
-&char           &short          &int                   &float  &double  &long  &sizet                                                             &none  &none  &none  &none  &none  &none  &none
-&pointertochar  &pointertovoid  &pointertovoidpointer  &none   &none    &none  &none                                                              &none  &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none    &none  &none       &makeremake        &makedebug            &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none    &none                                 &sudomakeinstall      &none                &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none           &enternvim  &exitnvimwithsave  &makeclean            &none  &none  &none         &none  &none  &none  &none  &none
+&char           &short          &int                   &float  &double  &long  &sizet                                                                     &none  &none  &none  &none  &none  &none  &reisub
+&pointertochar  &pointertovoid  &pointertovoidpointer  &none   &none    &none  &none                                                                      &none  &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none    &none  &none       &makeremake        &makedebug            &kp LC(C)  &kp LC(D)  &none  &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none    &none                                 &sudomakeinstall      &kp LC(X)                    &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none           &enternvim  &exitnvimwithsave  &makeclean            &kp LC(Z)  &none      &none         &none  &none  &none  &none  &none
             >;
         };
     };
