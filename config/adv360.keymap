@@ -116,6 +116,48 @@
             bindings = <&kp V &kp O &kp I &kp D &kp SPACE &kp STAR &kp STAR &kp SPACE>;
             label = "POINTERTOVOIDPOINTER";
         };
+
+        enternvim: enternvim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp V &kp I &kp M &kp RET>;
+            label = "ENTERNVIM";
+        };
+
+        exitnvimwithsave: exitnvimwithsave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &kp COLON &kp W &kp Q &kp RET>;
+            label = "EXITNVIMWITHSAVE";
+        };
+
+        makeremake: makeremake {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp A &kp K &kp E &kp SPACE &kp R &kp E &kp M &kp A &kp K &kp E &kp RET>;
+            label = "MAKEREMAKE";
+        };
+
+        makedebug: makedebug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp A &kp K &kp E &kp SPACE &kp D &kp E &kp B &kp U &kp G &kp RET>;
+            label = "MAKEDEBUG";
+        };
+
+        sudomakeinstall: sudomakeinstall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp U &kp D &kp O &kp SPACE &kp M &kp A &kp K &kp E &kp SPACE &kp I &kp N &kp S &kp T &kp A &kp L &kp L &kp RET>;
+            label = "SUDOMAKEINSTALL";
+        };
+
+        makeclean: makeclean {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp A &kp K &kp E &kp SPACE &kp C &kp L &kp E &kp A &kp N &kp RET>;
+            label = "MAKECLEAN";
+        };
     };
 
     keymap {
@@ -163,11 +205,11 @@
 
         experimental {
             bindings = <
-&char           &short          &int                   &float  &double  &long  &sizet                                  &none  &none  &none  &none  &none  &none  &none
-&pointertochar  &pointertovoid  &pointertovoidpointer  &none   &none    &none  &none                                   &none  &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none    &none  &none   &none  &none      &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none    &none                 &none      &none                &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none           &none   &none  &none      &none  &none  &none         &none  &none  &none  &none  &none
+&char           &short          &int                   &float  &double  &long  &sizet                                                             &none  &none  &none  &none  &none  &none  &none
+&pointertochar  &pointertovoid  &pointertovoidpointer  &none   &none    &none  &none                                                              &none  &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none    &none  &none       &makeremake        &makedebug            &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none    &none                                 &sudomakeinstall      &none                &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none           &enternvim  &exitnvimwithsave  &makeclean            &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
     };
