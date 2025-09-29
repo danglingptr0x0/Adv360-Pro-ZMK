@@ -175,11 +175,11 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                        &mo 3            &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &macro_braces                                                 &macro_dquotes   &kp Y   &kp U   &kp I      &kp O     &kp P     &kp SEMI
-&kp EQUAL  &kp A      &kp S     &kp D     &kp F      &kp G   &parens        &kp LCTRL  &kp LGUI      &kp LALT   &kp RCTRL  &macro_brackets  &kp H   &kp J   &kp K      &kp L     &kp FSLH  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                             &kp HOME      &kp PG_UP                              &kp N   &kp M   &kp COMMA  &kp DOT   &kp BSLH  &lt 4 TILDE2
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC       &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5  &kp GRAVE                                                     &mo 3            &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T   &macro_braces                                                 &macro_dquotes   &kp Y   &kp U   &kp I      &kp O     &kp P     &kp SEMI
+&kp EQUAL  &kp A   &kp S   &kp D     &kp F      &kp G   &parens        &kp LCTRL  &kp LGUI      &kp LALT   &kp RCTRL  &macro_brackets  &kp H   &kp J   &kp K      &kp L     &kp FSLH  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B                             &kp HOME      &kp PG_UP                              &kp N   &kp M   &kp COMMA  &kp DOT   &kp BSLH  &lt 4 TILDE2
+&mo 2      &none   &none   &kp LEFT  &kp RIGHT          &kp BSPC       &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -195,11 +195,11 @@
 
         layer_fn {
             bindings = <
-&kp F1           &kp F2           &kp F3       &kp F4      &kp F5     &kp F6  &tog 1                                                                                      &mo 3     &kp F7    &kp F8    &kp F9  &kp F10    &kp F11  &kp F12
-&macro_nautilus  &kp PRINTSCREEN  &macro_copy  &macro_cut  &kp LC(V)  &trans  &none                                                                                       &none     &trans    &trans    &trans  &trans     &trans   &kp LS(K)
-&macro_calc      &trans           &trans       &trans      &trans     &trans  &none             &trans      &macro_max               &kp C_VOL_UP  &kp C_NEXT             &none     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
-&macro_calendar  &trans           &trans       &trans      &trans     &trans                                &kp LA(LC(T))            &kp C_VOL_DN                                   &trans    &trans    &trans  &trans     &trans   &trans
-&trans           &trans           &trans       &trans      &trans             &kp C_PLAY_PAUSE  &kp C_STOP  &macro_disassembler      &kp C_MUTE    &kp LC(RIGHT_BRACKET)  &gotodef            &trans    &trans  &trans     &trans   &trans
+&kp F1           &kp F2           &kp F3       &kp F4      &kp F5     &kp F6  &tog 1                                                             &mo 3  &kp F7    &kp F8    &kp F9  &kp F10    &kp F11  &kp F12
+&macro_nautilus  &kp PRINTSCREEN  &macro_copy  &macro_cut  &kp LC(V)  &trans  &none                                                              &none  &trans    &trans    &trans  &trans     &trans   &kp LS(K)
+&macro_calc      &trans           &trans       &trans      &trans     &trans  &none             &trans      &none      &kp C_VOL_UP  &kp C_NEXT  &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
+&macro_calendar  &trans           &trans       &trans      &trans     &trans                                &none      &kp C_VOL_DN                     &trans    &trans    &trans  &trans     &trans   &trans
+&trans           &trans           &trans       &trans      &trans             &kp C_PLAY_PAUSE  &kp C_STOP  &none      &kp C_MUTE    &none       &none            &trans    &trans  &trans     &trans   &trans
             >;
         };
 
@@ -215,11 +215,11 @@
 
         experimental {
             bindings = <
-&char           &short          &int                   &float  &double  &long  &sizet                                                                     &none  &none  &none  &none  &none  &none  &reisub
-&pointertochar  &pointertovoid  &pointertovoidpointer  &none   &none    &none  &none                                                                      &none  &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none    &none  &none       &makeremake        &makedebug            &kp LC(C)  &kp LC(D)  &none  &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none    &none                                 &sudomakeinstall      &kp LC(X)                    &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none           &enternvim  &exitnvimwithsave  &makeclean            &kp LC(Z)  &none      &none         &none  &none  &none  &none  &none
+&char           &short          &int                   &float  &double  &long  &sizet                                                          &none  &none  &none  &none  &none  &none  &reisub
+&pointertochar  &pointertovoid  &pointertovoidpointer  &none   &none    &none  &none                                                           &none  &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none    &none  &none       &none              &none      &kp LC(C)  &kp LC(D)  &none  &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none    &none                                 &none      &kp LC(X)                    &none  &none  &none  &none  &none  &none
+&none           &none           &none                  &none   &none           &enternvim  &exitnvimwithsave  &none      &kp LC(Z)  &none      &none         &none  &none  &none  &none  &none
             >;
         };
     };
