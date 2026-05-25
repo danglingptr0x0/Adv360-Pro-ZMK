@@ -215,11 +215,11 @@
 
         experimental {
             bindings = <
-&char           &short          &int                   &float  &double  &long  &sizet                                                          &none  &none  &none  &none  &none  &none  &reisub
-&pointertochar  &pointertovoid  &pointertovoidpointer  &none   &none    &none  &none                                                           &none  &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none    &none  &none       &none              &none      &kp LC(C)  &kp LC(D)  &none  &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none    &none                                 &none      &kp LC(X)                    &none  &none  &none  &none  &none  &none
-&none           &none           &none                  &none   &none           &enternvim  &exitnvimwithsave  &none      &kp LC(Z)  &none      &none         &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none                                                           &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none                                                           &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none       &none              &none      &kp LC(C)  &kp LC(D)  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                                 &none      &kp LC(X)                    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none         &enternvim  &exitnvimwithsave  &none      &kp LC(Z)  &none      &none         &none  &none  &none  &none  &none
             >;
         };
     };
